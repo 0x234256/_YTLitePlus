@@ -1,0 +1,33 @@
+name: Deploy Worker
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: macos-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run custom script
+        env:
+          URL_DEVICES: ${{ secrets.URL_DEVICES }}
+          KEY_ID: ${{ secrets.KEY_ID }}
+          ISSUER_ID: ${{ secrets.ISSUER_ID }}
+          KEY_CONTENT: ${{ secrets.KEY_CONTENT }}
+          GIT_ENCODE: ${{ secrets.GIT_ENCODE }}
+          TEMP_KEYCHAIN_PASSWORD: ${{ secrets.TEMP_KEYCHAIN_PASSWORD }}
+          MATCH_KEYCHAIN_PASSWORD: ${{ secrets.MATCH_KEYCHAIN_PASSWORD }}
+          URL_DEVICES: ${{ secrets.URL_DEVICES }}
+          URL_IPA: ${{ secrets.URL_IPA }}
+          BUNDLE_ID: ${{ secrets.BUNDLE_ID }}
+        run: |
+          chmod +x ./ota.sh
+          ./ota.sh 
+      - name: Build & Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
