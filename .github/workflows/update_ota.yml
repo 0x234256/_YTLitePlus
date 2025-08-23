@@ -19,8 +19,7 @@ jobs:
           KEY_CONTENT: ${{ secrets.KEY_CONTENT }}
           GIT_ENCODE: ${{ secrets.GIT_ENCODE }}
           TEMP_KEYCHAIN_PASSWORD: ${{ secrets.TEMP_KEYCHAIN_PASSWORD }}
-          MATCH_KEYCHAIN_PASSWORD: ${{ secrets.MATCH_KEYCHAIN_PASSWORD }}
-          URL_DEVICES: ${{ secrets.URL_DEVICES }}
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
           URL_IPA: ${{ secrets.URL_IPA }}
           BUNDLE_ID: ${{ secrets.BUNDLE_ID }}
         run: |
