@@ -25,6 +25,12 @@ jobs:
         run: |
           chmod +x ./ota.sh
           ./ota.sh 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install Wrangler v4
+        run: npm install -g wrangler@latest
 
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
