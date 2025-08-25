@@ -16,7 +16,7 @@ echo "Start resing App"
 fastlane adhoc > /dev/null 2>&1
 echo "End resing App"
 
-mkdir public
+# mkdir public
 cp $NAME_IPA_PACH public/orange.ipa
 
 echo "Gen Ota-site"
