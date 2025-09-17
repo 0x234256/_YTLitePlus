@@ -101,7 +101,7 @@ platform :ios do
       match(
         type: "adhoc",
         git_basic_authorization: "#{GIT_ENCODE}", 
-        readonly: true,
+        readonly: false,
         keychain_name: keychain_name,
         keychain_password: keychain_password,
         # force: true,
