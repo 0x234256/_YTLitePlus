@@ -1,5 +1,5 @@
 {
-  "name": "youtubePlus",
+  "name": "youtube-plus",
   "compatibility_date": "2025-08-21",
   "assets": {
     "directory": "./public/"

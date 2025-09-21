@@ -15,4 +15,5 @@ git push origin HEAD --tags
 gh release create ${NEW_VERSION} ${NAME} --notes "v${NEW_VERSION}"
 
 ./ota.sh $NEW_VERSION
+wrangler deploy
 
