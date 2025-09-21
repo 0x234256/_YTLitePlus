@@ -15,14 +15,6 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
-### ios devices
-
-```sh
-[bundle exec] fastlane ios devices
-```
-
-Register New Devices
-
 ### ios adhoc
 
 ```sh
