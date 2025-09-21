@@ -14,7 +14,7 @@
 
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
-IPA_NAME="./public/YTLitePlus.ipa"
+IPA_NAME="YTLitePlus.ipa"
 BUNDLE_ID="com.google.ios.youtube"
 
 TEMP_KEYCHAIN_USER = "temp"

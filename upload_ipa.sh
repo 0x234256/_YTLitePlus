@@ -3,6 +3,8 @@ NAME=public/YTLitePlus.ipa
 
 set -e
 
+fastlane ios adhoc
+
 BUILD=$(date +%s) 
 NEW_VERSION=19.${BUILD}
 echo $NEW_VERSION > version
