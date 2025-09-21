@@ -11,21 +11,21 @@
                     <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>${URL_DOWNLOAD}</string>
+                    <string>https://github.com/0x234256/_YTLitePlus/releases/download/19.1758486363/YTLitePlus.ipa</string>
                 </dict>
             </array>
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>io.ucb.anderson.youtube</string>
+                <string>com.google.ios.youtube</string>
                 <key>bundle-version</key>
-                <string>2.7.2</string>
+                <string>19.34.2</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>Orange</string>
+                <string>YoutubePlus</string>
                 <key>subtitle</key>
-                <string>Aplicativo Orange</string>
+                <string>Aplicativo YoutubePlus</string>
             </dict>
         </dict>
     </array>

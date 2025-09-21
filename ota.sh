@@ -1,44 +1,15 @@
 source .env
 set -e
 
-NAME_IPA_PACH=orange.ipa
-URL_DOWNLOAD="${URL_IPA}/${NAME_IPA_PACH}"
+VERSION=$1
 
-echo "Start Dowload"
-curl "$URL_DOWNLOAD" -o $NAME_IPA_PACH  > /dev/null 2>&1
-echo "End Downalod"
+DOMAIN=
+URL_DOWNLOAD=https://github.com/0x234256/_YTLitePlus/releases/download/${VERSION}/YTLitePlus.ipa
+BUNDLE_ID=com.google.ios.youtube
 
-echo "Start update profiles"
-fastlane devices  > /dev/null 2>&1
-echo "End update profiles"
-
-echo "Start resing App"
-fastlane adhoc > /dev/null 2>&1
-echo "End resing App"
-
-# mkdir public
-cp $NAME_IPA_PACH public/orange.ipa
-
-echo "Gen Ota-site"
-cat > public/index.html <<EOF
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Orange</title>
-    <meta http-equiv="refresh" content="0; URL='itms-services://?action=download-manifest&url=${URL_IPA}/manifest.plist'" />
-    <style>
-body {
-  background-color: Canvas;
-  color: CanvasText;
-  color-scheme: light dark;
-}
-    </style>
-  </head>
-  <body>
-  </body>
-</html>
-EOF
+# echo "Start resing App"
+# fastlane adhoc
+# echo "End resing App"
 
 echo "manifest.plist..."
 cat > public/manifest.plist <<EOF
@@ -63,13 +34,13 @@ cat > public/manifest.plist <<EOF
                 <key>bundle-identifier</key>
                 <string>${BUNDLE_ID}</string>
                 <key>bundle-version</key>
-                <string>2.7.2</string>
+                <string>19.34.2</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>Orange</string>
+                <string>YoutubePlus</string>
                 <key>subtitle</key>
-                <string>Aplicativo Orange</string>
+                <string>Aplicativo YoutubePlus</string>
             </dict>
         </dict>
     </array>
