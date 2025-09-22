@@ -1,5 +1,5 @@
 REPO=0x234256/_YTLitePlus
-NAME=public/YTLitePlus.ipa
+NAME=YTLitePlus.ipa
 
 set -e
 
